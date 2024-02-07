@@ -7,8 +7,8 @@ import Header from './components/shared/header/Header';
 function App() {
   return (
     <Router>
-      <Header/>
       <div className='main-container'>
+      <Header/>
           <Routes>
             <Route index element={<HomePage />} />
             <Route path='Products' element={<ProductsPage />} />

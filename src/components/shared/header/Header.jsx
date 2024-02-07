@@ -1,21 +1,21 @@
-import React from 'react'
+import React from 'react';
 import styles from './header.module.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className={styles["header"]}>
-        <nav className={styles["nav-bar"]}>
-        <ul>
-          <li><Link to="/">Home</Link></li> 
-          <li><Link to="/About">Products</Link></li> 
+    <header className={styles.header}>
+      <nav className={styles['nav-bar']}>
+        <ul className={styles['nav-list']}>
+          <li><Link to="/" className={styles['nav-item']}>Home</Link></li> 
+          <li><Link to="/Products" className={styles['nav-item']}>Products</Link></li> 
         </ul>
       </nav>
-      <div className={styles["cart"]}>
-        <a href="">Cart</a>
+      <div className={styles.cart}>
+        <a href="" className={styles['cart-link']}>Cart</a>
       </div>
-      
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
