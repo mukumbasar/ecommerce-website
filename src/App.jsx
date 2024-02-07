@@ -6,15 +6,15 @@ import Header from './components/shared/header/Header';
 
 function App() {
   return (
-    <Router>
       <div className='main-container'>
-      <Header/>
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path='Products' element={<ProductsPage />} />
-          </Routes>
+        <Router>
+          <Header/>
+            <Routes>
+              <Route index element={<HomePage />} />
+              <Route path='Products' element={<ProductsPage />} />
+            </Routes>
+        </Router>
       </div>
-    </Router>
   );
 }
 
