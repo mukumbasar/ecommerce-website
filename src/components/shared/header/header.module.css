@@ -1,11 +1,10 @@
-/* header.module.css */
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(141, 174, 202);
-    width: calc(100% - 10px);
+    background-color: #f8c0b6;
+    
+    width: calc(100% - 50px);
     padding: 10px 5px;
     overflow-x: hidden;
     border-radius: 10px;
@@ -33,24 +32,24 @@
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #303179;
     padding: 8px 12px; 
     border-radius: 20px; 
     transition: background-color 0.3s ease; 
 }
 
 .nav-bar ul li a:hover {
-    background-color: #2d6ca4; 
+    background-color: #ed7966; 
 }
 
 .cart a {
     text-decoration: none;
-    color: #333;
+    color: #303179;
     padding: 8px 12px; 
     border-radius: 20px; 
     transition: background-color 0.3s ease; 
 }
 
 .cart a:hover {
-    background-color: #1e609b; 
+    background-color: #ed7966; 
 }

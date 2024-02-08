@@ -1,0 +1,7 @@
+.product-page-container {
+    margin: 20px; 
+}
+
+.home-page-container > :not(:last-child) {
+    margin-bottom: 20px;
+}

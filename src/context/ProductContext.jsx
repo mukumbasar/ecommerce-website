@@ -5,11 +5,13 @@ const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [isPopular, setIsPopular] = useState(true);
 
     const fetchProducts = () =>{
         getProducts()
             .then(productsData => {
                 console.log("Products:", productsData);
+                console.log('değil');
                 setProducts(productsData);
             })
             .catch(error => {
@@ -22,6 +24,7 @@ export const ProductProvider = ({ children }) => {
             .then(productsData => {
                 console.log("Products:", productsData);
                 const popularProducts = productsData.filter(product => product.rating >= 4.5);
+                console.log('popüler');
                 setProducts(popularProducts);
             })
             .catch(error => {
@@ -30,8 +33,8 @@ export const ProductProvider = ({ children }) => {
     }
 
     return (
-        <ProductContext.Provider value={{ fetchPopularProducts, fetchProducts, products }}>
-            {children}
+        <ProductContext.Provider value={{ fetchPopularProducts, fetchProducts, products, isPopular, setIsPopular }}>
+        {children}
         </ProductContext.Provider>
     );
 }
