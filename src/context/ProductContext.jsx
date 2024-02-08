@@ -7,29 +7,8 @@ export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [isPopular, setIsPopular] = useState(true);
 
-    const fetchProducts = () =>{
-        getProducts()
-            .then(productsData => {
-                setProducts(productsData);
-            })
-            .catch(error => {
-                console.error("Error fetching products:", error);
-            });
-    }
-
-    const fetchPopularProducts = () => {
-        getProducts()
-            .then(productsData => {
-                const popularProducts = productsData.filter(product => product.rating >= 4.5);
-                setProducts(popularProducts);
-            })
-            .catch(error => {
-                console.error("Error fetching products:", error);
-            });
-    }
-
     return (
-        <ProductContext.Provider value={{ fetchPopularProducts, fetchProducts, products, isPopular, setIsPopular }}>
+        <ProductContext.Provider value={{ products, setProducts, isPopular, setIsPopular }}>
         {children}
         </ProductContext.Provider>
     );

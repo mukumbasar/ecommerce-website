@@ -1,20 +1,21 @@
 import React from 'react';
 import styles from './card.module.css';
 import { useCartContext } from '../../../context/CartContext';
+import { addToCart } from '../../../services/cartServices';
 
 const Card = ({ product }) => {
-  const { addToCart } = useCartContext();
+  const { cart, setCart } = useCartContext();
 
   const handleAddToCart = () => {
-    addToCart({
+    addToCart(cart, setCart, {
       id: product.id,
       image: product.images[0],
       title: product.title,
       description: product.description,
       price: product.price,
-      count: 1
     });
-  }
+    console.log(cart);
+  };
 
   return (
     <div className={styles['card']}>

@@ -2,19 +2,19 @@ import React, { useEffect } from 'react';
 import Card from '../card/Card.jsx';
 import styles from './cardContainer.module.css';
 import { useProductContext } from '../../../context/ProductContext';
+import { fetchPopularProducts, fetchProducts } from '../../../services/productService.js';
 
 const CardContainer = () => {
-  const { products, isPopular, fetchProducts, fetchPopularProducts } = useProductContext();
+  const { products, isPopular, setProducts } = useProductContext();
 
   useEffect(() => {
     if (isPopular) {
-      fetchPopularProducts();
+      fetchPopularProducts(setProducts);
     } else {
-      fetchProducts();
+      fetchProducts(setProducts);
     }
   }, [isPopular]);
   
-
   return (
       <div className={styles['card-container']}>
         {Array.isArray(products) && products.map((product) => (
