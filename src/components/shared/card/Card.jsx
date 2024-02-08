@@ -20,13 +20,13 @@ const Card = ({ product }) => {
   return (
     <div className={styles['card']}>
       <img src={product.images[0]} alt={product.title} />
-      <h3>{product.title}</h3>
       <div className={styles['cardContent']}>
-        <p>{product.description}</p>
+        <h4>{product.title}</h4>
         <p>${product.price}</p>
-        <div className={styles['buttons']}>
-          <button onClick={handleAddToCart}>+</button>
-        </div>
+        <p>{product.description}</p>
+      </div>
+      <div className={styles['buttons']}>
+        <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
     </div>
   );

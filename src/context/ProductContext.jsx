@@ -1,5 +1,4 @@
 import React, { createContext, useState, useContext } from 'react';
-import { getProducts } from '../services/productService.js';
 
 const ProductContext = createContext();
 

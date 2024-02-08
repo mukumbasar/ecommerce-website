@@ -13,4 +13,24 @@ const addToCart = (cart, setCart, cartItem) => {
     }
 };
 
-export { addToCart };
+const removeFromCart = (cart, setCart, cartItem) => {
+    const existingItem = cart.find(item => item.id === cartItem.id);
+    
+    if (existingItem) {
+        if (existingItem.count > 1) {
+            const updatedCart = cart.map(item => {
+                if (item.id === cartItem.id) {
+                    return { ...item, count: item.count - 1 };
+                }
+                return item;
+            });
+            setCart(updatedCart);
+        } else {
+            const updatedCart = cart.filter(item => item.id !== cartItem.id);
+            setCart(updatedCart);
+        }
+    }
+};
+
+
+export { addToCart, removeFromCart };

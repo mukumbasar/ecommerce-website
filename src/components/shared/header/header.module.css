@@ -2,13 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #cecbcb;
+    background-color: #b4dbde;
     
     width: calc(100% - 50px);
     padding: 10px 5px;
     overflow-x: hidden;
     border-radius: 10px;
     font-size: 20px;
+    border: 1px solid #666666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar {
@@ -39,7 +41,7 @@
 }
 
 .nav-bar ul li a:hover {
-    background-color: #a9a8a8; 
+    background-color: #9bbcbe; 
 }
 
 .cart a {
@@ -51,5 +53,5 @@
 }
 
 .cart a:hover {
-    background-color: #a9a8a8; 
+    background-color: #9bbcbe; 
 }
