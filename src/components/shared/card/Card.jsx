@@ -14,7 +14,6 @@ const Card = ({ product }) => {
       description: product.description,
       price: product.price,
     });
-    console.log(cart);
   };
 
   return (
