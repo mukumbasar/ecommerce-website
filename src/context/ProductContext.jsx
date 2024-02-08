@@ -10,8 +10,6 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = () =>{
         getProducts()
             .then(productsData => {
-                console.log("Products:", productsData);
-                console.log('değil');
                 setProducts(productsData);
             })
             .catch(error => {
@@ -22,9 +20,7 @@ export const ProductProvider = ({ children }) => {
     const fetchPopularProducts = () => {
         getProducts()
             .then(productsData => {
-                console.log("Products:", productsData);
                 const popularProducts = productsData.filter(product => product.rating >= 4.5);
-                console.log('popüler');
                 setProducts(popularProducts);
             })
             .catch(error => {
