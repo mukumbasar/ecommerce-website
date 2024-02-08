@@ -19,6 +19,7 @@ const HomePage = () => {
     <div>
       <div className={styles['home-page-container']}>
         <Slider />
+        <h2 className={styles['home-page-title']}>Popular Products</h2>
         <CardContainer />
       </div>
       <CartOverlay>

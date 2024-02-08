@@ -15,6 +15,7 @@ const ProductsPage = () => {
 
   return (
     <div className={styles['product-page-container']}>
+      <h2 className={styles['product-page-title']}>Products</h2>
       <CardContainer />
       <CartOverlay>
         {cart && cart.map(product => (

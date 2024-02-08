@@ -5,3 +5,9 @@
 .home-page-container > :not(:last-child) {
     margin-bottom: 20px;
 }
+
+.home-page-container .home-page-title {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px; 
+  }
