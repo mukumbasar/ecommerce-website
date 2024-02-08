@@ -7,8 +7,8 @@
     width: 220px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 30px;
-    background-color: #fae5df;
-    color: #303179;
+    background-color: #eeeeee;
+    color: #000000;
 }
 
 .card img {
@@ -40,7 +40,7 @@
 
 .card button {
     width: 30%;
-    background-color: #daa298;
+    background-color: #cecbcb;
     border: none;
     padding: 8px;
     border-radius: 5px; 
@@ -48,5 +48,5 @@
 }
 
 .card button:hover {
-    background-color: #ed7966; 
+    background-color: #a9a8a8; 
 }

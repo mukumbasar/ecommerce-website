@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8c0b6;
+    background-color: #cecbcb;
     
     width: calc(100% - 50px);
     padding: 10px 5px;
@@ -32,24 +32,24 @@
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: #303179;
+    color: #000000;
     padding: 8px 12px; 
     border-radius: 20px; 
     transition: background-color 0.3s ease; 
 }
 
 .nav-bar ul li a:hover {
-    background-color: #ed7966; 
+    background-color: #a9a8a8; 
 }
 
 .cart a {
     text-decoration: none;
-    color: #303179;
+    color: #000000;
     padding: 8px 12px; 
     border-radius: 20px; 
     transition: background-color 0.3s ease; 
 }
 
 .cart a:hover {
-    background-color: #ed7966; 
+    background-color: #a9a8a8; 
 }
