@@ -1,6 +1,6 @@
 .cart-overlay {
   position: fixed;
-  top: calc(50% - 400px);
+  top: calc(50% - 290px);
   bottom: calc(50% - 50px);
   right: -300px;
   width: 300px;
