@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <div>
       <div className={styles['home-page-container']}>
-        <Slider />
+        <Slider transitionSpeed={5000}/>
         <h2 className={styles['home-page-title']}>Popular Products</h2>
         <CardContainer />
       </div>
