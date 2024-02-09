@@ -1,19 +1,49 @@
 import React from 'react';
 import styles from './card.module.css';
 import { useCartContext } from '../../../context/CartContext';
-import { addToCart } from '../../../services/cartServices';
+import { useProductContext } from '../../../context/ProductContext';
+import { addToCart, removeFromCart } from '../../../services/cartServices';
 
 const Card = ({ product }) => {
   const { cart, setCart } = useCartContext();
+  const { products, setProducts } = useProductContext();
 
-  const handleAddToCart = () => {
-    addToCart(cart, setCart, {
+  const handleAddToCart = (event) => {
+    event.preventDefault();
+    addToCart(products, setProducts, cart, setCart, {
       id: product.id,
       image: product.images[0],
       title: product.title,
       description: product.description,
       price: product.price,
     });
+    
+    const updatedProducts = products.map(prod => {
+      if (prod.id === product.id) {
+        return { ...prod, count: prod.count + 1 };
+      }
+      return prod;
+    });
+    setProducts(updatedProducts);
+  };
+
+  const handleRemovingFromCart = (event) => {
+    event.preventDefault();
+    removeFromCart(products, setProducts ,cart, setCart, {
+      id: product.id,
+      image: product.images[0],
+      title: product.title,
+      description: product.description,
+      price: product.price,
+    });
+
+    const updatedProducts = products.map(prod => {
+      if (prod.id === product.id) {
+        return { ...prod, count: Math.max((prod.count || 0) - 1, 0) }; // Ensure count doesn't go below 0
+      }
+      return prod;
+    });
+    setProducts(updatedProducts);
   };
 
   return (
@@ -25,7 +55,9 @@ const Card = ({ product }) => {
         <p>{product.description}</p>
       </div>
       <div className={styles['buttons']}>
-        <button onClick={handleAddToCart}>Add to Cart</button>
+      <a href="#" onClick={handleAddToCart}>↑</a>
+        <p>Quantity: {product.count}</p>
+      {product.count > 0 && <a href="#" onClick={handleRemovingFromCart}>↓</a>}
       </div>
     </div>
   );

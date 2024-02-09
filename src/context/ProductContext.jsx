@@ -4,10 +4,11 @@ const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [popularProducts, setPopularProducts] = useState([]);
     const [isPopular, setIsPopular] = useState(true);
 
     return (
-        <ProductContext.Provider value={{ products, setProducts, isPopular, setIsPopular }}>
+        <ProductContext.Provider value={{ products, setProducts, isPopular, setIsPopular, popularProducts, setPopularProducts }}>
         {children}
         </ProductContext.Provider>
     );

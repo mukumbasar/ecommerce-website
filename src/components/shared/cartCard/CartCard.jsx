@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './cartCard.module.css';
 import { useCartContext } from '../../../context/CartContext';
+import { useProductContext } from '../../../context/ProductContext';
 import { addToCart, removeFromCart } from '../../../services/cartServices';
 
 const CartCard = ({ product }) => {
     const { cart, setCart } = useCartContext();
+    const { products, setProducts } = useProductContext();
 
     const handleAddToCart = (event) => {
         event.preventDefault();
-        addToCart(cart, setCart, {
+        addToCart(products, setProducts, cart, setCart, {
             id: product.id,
             image: product.image,
             title: product.title,
@@ -19,7 +21,7 @@ const CartCard = ({ product }) => {
 
     const handleRemovingFromCart = (event) => {
         event.preventDefault();
-        removeFromCart(cart, setCart, {
+        removeFromCart(products, setProducts, cart, setCart, {
             id: product.id,
             image: product.image,
             title: product.title,

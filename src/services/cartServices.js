@@ -1,4 +1,4 @@
-const addToCart = (cart, setCart, cartItem) => {
+const addToCart = (products, setProducts, cart, setCart, cartItem) => {
     const existingItem = cart.find(item => item.id === cartItem.id);
     if (existingItem) {
         const updatedCart = cart.map(item => {
@@ -8,12 +8,20 @@ const addToCart = (cart, setCart, cartItem) => {
             return item;
         });
         setCart(updatedCart);
+
+        const updatedProducts = products.map(product => {
+            if (product.id === cartItem.id) {
+                return { ...product, count: (product.count || 0) + 1 }; 
+            }
+            return product;
+        });
+        setProducts(updatedProducts);
     } else {
         setCart(prevCart => [...prevCart, { ...cartItem, count: 1 }]);
     }
 };
 
-const removeFromCart = (cart, setCart, cartItem) => {
+const removeFromCart = (products, setProducts, cart, setCart, cartItem) => {
     const existingItem = cart.find(item => item.id === cartItem.id);
     
     if (existingItem) {
@@ -29,6 +37,14 @@ const removeFromCart = (cart, setCart, cartItem) => {
             const updatedCart = cart.filter(item => item.id !== cartItem.id);
             setCart(updatedCart);
         }
+
+        const updatedProducts = products.map(product => {
+            if (product.id === cartItem.id) {
+                return { ...product, count: Math.max((product.count || 0) - 1, 0) };
+            }
+            return product;
+        });
+        setProducts(updatedProducts);
     }
 };
 
