@@ -10,8 +10,8 @@ A React and Node.js practice application showcasing some of the fundamental e-co
   - Axios
 - CSS
 - Font Awesome
-
-
+- 
+## Screenshots:
 ![eCommerceWebsiteHome](https://github.com/mukumbasar/ecommerce-website/assets/93601245/938410e7-2d90-418f-8bd2-47355956a450)
 ![eCommerceWebsiteProductsAndCart](https://github.com/mukumbasar/ecommerce-website/assets/93601245/03c29d6d-e2f8-4fd3-bc97-54396ce62fcf)
 
