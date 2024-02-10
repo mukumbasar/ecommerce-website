@@ -1,6 +1,16 @@
 # Ecommerce Website
 
-A React and Node.js practice application showcasing some of the fundamental e-commerce features.
+A React and Node.js practice application showcasing some of the fundamental e-commerce features: Shopping cart, filtering, dynamic slider functionalities.
+
+## Tools:
+- Node.js
+- React
+  - Context API
+  - React Router DOM
+  - Axios
+- CSS
+- Font Awesome
+
 
 ![eCommerceWebsiteHome](https://github.com/mukumbasar/ecommerce-website/assets/93601245/938410e7-2d90-418f-8bd2-47355956a450)
 ![eCommerceWebsiteProductsAndCart](https://github.com/mukumbasar/ecommerce-website/assets/93601245/03c29d6d-e2f8-4fd3-bc97-54396ce62fcf)
