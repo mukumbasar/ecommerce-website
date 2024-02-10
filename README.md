@@ -1,6 +1,5 @@
 # Ecommerce Website
-
-A React and Node.js practice application showcasing some of the fundamental e-commerce features: Shopping cart, filtering, dynamic slider functionalities.
+A React and Node.js application serves as a learning exercise to develop proficiency in both technologies, showcasing fundamental e-commerce features including a shopping cart, filtering, and dynamic slider functionalities.
 
 ## Tools:
 - Node.js
